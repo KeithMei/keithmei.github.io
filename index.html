@@ -151,40 +151,64 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-FirstBlog-如何利用Hexo与Github写Blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/25/hello-world/">Hello World</a>
+      <a class="article-title" href="/2019/11/25/FirstBlog-%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8Hexo%E4%B8%8EGithub%E5%86%99Blog/">FirstBlog--如何利用Hexo与Github写Blog</a>
     </h1>
   
 
         
-        <a href="/2019/11/25/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-25T01:29:08.761Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-25</time>
+        <a href="/2019/11/25/FirstBlog-%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8Hexo%E4%B8%8EGithub%E5%86%99Blog/" class="archive-article-date">
+  	<time datetime="2019-11-25T05:22:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        <h1 id="关于github与hexo如何搭建Blog"><a href="#关于github与hexo如何搭建Blog" class="headerlink" title="关于github与hexo如何搭建Blog"></a>关于github与hexo如何搭建Blog</h1><h2 id="1-基本环境的准备"><a href="#1-基本环境的准备" class="headerlink" title="1. 基本环境的准备"></a>1. 基本环境的准备</h2><p>本人使用的是ubuntu18.04版本的系统<br>当然hexo还支持以下系统, 例如:<br>centos, redhat, windows, mac等等, 更多详情信息请登录官网查询.</p>
+<h2 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2. 安装hexo"></a>2. 安装hexo</h2><p>在其他网络blog中, 以及官网文档中, 可以获取到hexo是nodejs所写的软件, 所以本环境需要安装nodejs<br>若是一个干净的系统环境, 没有安装其他服务, 则你还得安装git</p>
+<h3 id="1-gt-依赖环境安装"><a href="#1-gt-依赖环境安装" class="headerlink" title="1&gt; 依赖环境安装"></a>1&gt; 依赖环境安装</h3><p>sudo apt-get install git<br>sudo apt-get install -y nodejs</p>
+<h3 id="2-gt-hexo安装"><a href="#2-gt-hexo安装" class="headerlink" title="2&gt; hexo安装"></a>2&gt; hexo安装</h3><p>sudo npm install -g hexo-cli<br>sudo npm install hexo</p>
+<h3 id="3-gt-检测是否安装成功"><a href="#3-gt-检测是否安装成功" class="headerlink" title="3&gt; 检测是否安装成功"></a>3&gt; 检测是否安装成功</h3><p>进入准备创建hexo目录下<br>cd /data<br>执行以下命令<br>hexo init    # 把当前目录作为hexo初始目录<br>npm install     # 安装依赖包</p>
+<p>该命令会将hexo所需文件自动下载到hexo文件夹下。</p>
+<h3 id="新建完成后，指定文件夹的目录如下"><a href="#新建完成后，指定文件夹的目录如下" class="headerlink" title="#新建完成后，指定文件夹的目录如下"></a>#新建完成后，指定文件夹的目录如下</h3><p>.<br>├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── scripts<br>├── source<br>|      ├── _drafts<br>|      └── _posts<br>└── themes</p>
+<h3 id="4-gt-添加环境变量"><a href="#4-gt-添加环境变量" class="headerlink" title="4&gt; 添加环境变量"></a>4&gt; 添加环境变量</h3><p>echo ‘PATH=”$PATH:./node_modules/.bin”‘ &gt;&gt; ~/.profile</p>
+<h3 id="5-gt-查看本地运行结果"><a href="#5-gt-查看本地运行结果" class="headerlink" title="5&gt; 查看本地运行结果"></a>5&gt; 查看本地运行结果</h3><p>进入到刚才创建的目录下<br>cd /data<br>执行命令<br>hexo generate</p>
+<p>curl localhost:4000<br>查看返回结果(因为本人是在云平台上搭建的, 所以外网IP访问也没啥, 还没有配置好!!)</p>
+<p>如果有返回结果说明, hexo的安装没有问题. 若是出现其他不明的问题, 可以先网上搜索一下, 如还未找到相对应的答案, 可以联系我.(联系方式后面会告知大家)</p>
+<h2 id="3-配置github"><a href="#3-配置github" class="headerlink" title="3. 配置github"></a>3. 配置github</h2><h3 id="1-gt-注册github账号"><a href="#1-gt-注册github账号" class="headerlink" title="1&gt; 注册github账号"></a>1&gt; 注册github账号</h3><p>自行官网创建 github.com</p>
+<h3 id="2-gt-创建项目"><a href="#2-gt-创建项目" class="headerlink" title="2&gt; 创建项目"></a>2&gt; 创建项目</h3><p>在自己Github主页右下角，创建New repository。<br>比如我的Github账号是keithmei，那么我应该创建的repository名字应该是keithmei.github.io/heart</p>
+<h3 id="3-gt-配置部署"><a href="#3-gt-配置部署" class="headerlink" title="3&gt; 配置部署"></a>3&gt; 配置部署</h3><p>回到部署服务器上, 进入hexo目录下.<br>cd /data<br>编辑_config.yml文件, 添加以下内容.<br>deploy:<br>  type: git<br>  repository: <a href="https://github.com/keithmei/heart.git" target="_blank" rel="noopener">https://github.com/keithmei/heart.git</a><br>  branch: master</p>
+<p>注意: type:空格git, 不然会出现问题.</p>
+<h2 id="4-配置本机的ssh-key"><a href="#4-配置本机的ssh-key" class="headerlink" title="4. 配置本机的ssh key"></a>4. 配置本机的ssh key</h2><p>目的是方便hexo服务器与github相通, 然后就不用没上传一次就输入一次用户和密码.</p>
+<h3 id="1-gt-生产ssh-keys"><a href="#1-gt-生产ssh-keys" class="headerlink" title="1&gt; 生产ssh keys"></a>1&gt; 生产ssh keys</h3><p>ssh -keygen -t rsa -C “邮件地址@youremail.com”</p>
+<p>然后根据相关提示输入操作, 也都可以默认选项回车即可.</p>
+<h3 id="2-gt-添加ssh-key到github"><a href="#2-gt-添加ssh-key到github" class="headerlink" title="2&gt; 添加ssh key到github"></a>2&gt; 添加ssh key到github</h3><p>找到公钥, 一般都在家目录下 ~/.ssh/id_rsa.pub<br>使用命令查看文件<br>cat ~/.ssh/id_rsa.pub</p>
+<p>把id_rsa.pub文件内容复制.<br>进入自己的Github，右上角齿轮setting—左边列表SSH keys—Add SSH key。将内容复制到文本框（不用取title名字）。</p>
+<h3 id="3-gt-测试通信"><a href="#3-gt-测试通信" class="headerlink" title="3&gt; 测试通信"></a>3&gt; 测试通信</h3><p>在服务器上直接输入以下命令<br>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a><br>返回结果中看到successfully 等样式, 说明已经添加成功.</p>
+<h3 id="4-gt-完善个人信息"><a href="#4-gt-完善个人信息" class="headerlink" title="4&gt; 完善个人信息"></a>4&gt; 完善个人信息</h3><p>输入下面代码进行个人信息的设置, 把名称和邮箱替换成自己的.<br>git config –global user.name “keith” # 用户名<br>git config –global user.email “<a href="mailto:keith@qq.com" target="_blank" rel="noopener">keith@qq.com</a>“ # 填写自己的邮箱地址</p>
+<h2 id="5-使用hexo克隆主题"><a href="#5-使用hexo克隆主题" class="headerlink" title="5. 使用hexo克隆主题"></a>5. 使用hexo克隆主题</h2><p>git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
+<p>配置:<br>修改hexo根目录下的_config.yml:<br>theme: yilia</p>
+<p>更新:<br>cd themes/yilia<br>git pull</p>
+<p>本地查看:<br>cd /data<br>hexo g<br>hexo s</p>
+<p>部署上传:<br>hexo clean<br>hexo g<br>hexo s</p>
+<p>然后根据相关提示输入相关信息即可.</p>
+<h2 id="部分Hexo主题推荐"><a href="#部分Hexo主题推荐" class="headerlink" title="部分Hexo主题推荐"></a>部分Hexo主题推荐</h2><p>选择主题建议遵循KISS原则</p>
+<p>Hexo Themes -<a href="http://hexo.io/themes/" target="_blank" rel="noopener">http://hexo.io/themes/</a><br>Themes · hexojs/hexo Wiki - <a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">https://github.com/hexojs/hexo/wiki/Themes</a></p>
+<p>Yilia -<a href="http://litten.github.io/2014/08/31/hexo-theme-yilia/" target="_blank" rel="noopener">http://litten.github.io/2014/08/31/hexo-theme-yilia/</a><br>NexT - <a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a></p>
+<h2 id="开始写文章"><a href="#开始写文章" class="headerlink" title="开始写文章"></a>开始写文章</h2><p>hexo new “postName”<br>或路径/data/source/_posts下新建文件postName.md就可以了<br>文章内容和格式如下：</p>
+<hr>
+<p>title: 标题<br>date: YYYY-MM-DD<br>tags: 标签                    #多标签时以[tag1,tag2]格式填写</p>
+<h2 id="categories-类别-多类别时以-category1-category2-格式填写"><a href="#categories-类别-多类别时以-category1-category2-格式填写" class="headerlink" title="categories: 类别              .#多类别时以..[category1,category2]格式填写"></a>categories: 类别              .#多类别时以..[category1,category2]格式填写</h2><p>主页可显摘要<br>.
+        
+          <a class="article-more-a" href="/2019/11/25/FirstBlog-%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8Hexo%E4%B8%8EGithub%E5%86%99Blog/#more">more >></a>
+        
       
 
       
@@ -192,11 +216,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">技术分享</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/25/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/25/FirstBlog-%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8Hexo%E4%B8%8EGithub%E5%86%99Blog/">展开全文 >></a>
         </p>
       
 
@@ -317,6 +352,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">技术分享</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
