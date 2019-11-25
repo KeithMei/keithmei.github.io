@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Heart Address">
 <meta property="og:description" content="关于github与hexo如何搭建Blog1. 基本环境的准备本人使用的是ubuntu18.04版本的系统当然hexo还支持以下系统, 例如:centos, redhat, windows, mac等等, 更多详情信息请登录官网查询. 2. 安装hexo在其他网络blog中, 以及官网文档中, 可以获取到hexo是nodejs所写的软件, 所以本环境需要安装nodejs若是一个干净的系统环境, 没">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-25T05:59:24.575Z">
+<meta property="og:updated_time" content="2019-11-25T06:02:36.183Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Heart Address" type="application/atom+xml">
@@ -185,8 +185,8 @@
 <p>curl localhost:4000<br>查看返回结果(因为本人是在云平台上搭建的, 所以外网IP访问也没啥, 还没有配置好!!)</p>
 <p>如果有返回结果说明, hexo的安装没有问题. 若是出现其他不明的问题, 可以先网上搜索一下, 如还未找到相对应的答案, 可以联系我.(联系方式后面会告知大家)</p>
 <h2 id="3-配置github"><a href="#3-配置github" class="headerlink" title="3. 配置github"></a>3. 配置github</h2><h3 id="1-gt-注册github账号"><a href="#1-gt-注册github账号" class="headerlink" title="1&gt; 注册github账号"></a>1&gt; 注册github账号</h3><p>自行官网创建 github.com</p>
-<h3 id="2-gt-创建项目"><a href="#2-gt-创建项目" class="headerlink" title="2&gt; 创建项目"></a>2&gt; 创建项目</h3><p>在自己Github主页右下角，创建New repository。<br>比如我的Github账号是keithmei，那么我应该创建的repository名字应该是keithmei.github.io/heart</p>
-<h3 id="3-gt-配置部署"><a href="#3-gt-配置部署" class="headerlink" title="3&gt; 配置部署"></a>3&gt; 配置部署</h3><p>回到部署服务器上, 进入hexo目录下.<br>cd /data<br>编辑_config.yml文件, 添加以下内容.<br>deploy:<br>  type: git<br>  repository: <a href="https://github.com/keithmei/heart.git" target="_blank" rel="noopener">https://github.com/keithmei/heart.git</a><br>  branch: master</p>
+<h3 id="2-gt-创建项目"><a href="#2-gt-创建项目" class="headerlink" title="2&gt; 创建项目"></a>2&gt; 创建项目</h3><p>在自己Github主页右下角，创建New repository。<br>比如我的Github账号是keithmei，那么我应该创建的repository名字应该是keithmei.github.io</p>
+<h3 id="3-gt-配置部署"><a href="#3-gt-配置部署" class="headerlink" title="3&gt; 配置部署"></a>3&gt; 配置部署</h3><p>回到部署服务器上, 进入hexo目录下.<br>cd /data<br>编辑_config.yml文件, 添加以下内容.<br>deploy:<br>  type: git<br>  repository: <a href="https://github.com/keithmei/keithmei.github.io.git" target="_blank" rel="noopener">https://github.com/keithmei/keithmei.github.io.git</a><br>  branch: master</p>
 <p>注意: type:空格git, 不然会出现问题.</p>
 <h2 id="4-配置本机的ssh-key"><a href="#4-配置本机的ssh-key" class="headerlink" title="4. 配置本机的ssh key"></a>4. 配置本机的ssh key</h2><p>目的是方便hexo服务器与github相通, 然后就不用没上传一次就输入一次用户和密码.</p>
 <h3 id="1-gt-生产ssh-keys"><a href="#1-gt-生产ssh-keys" class="headerlink" title="1&gt; 生产ssh keys"></a>1&gt; 生产ssh keys</h3><p>ssh -keygen -t rsa -C “邮件地址@youremail.com”</p>
