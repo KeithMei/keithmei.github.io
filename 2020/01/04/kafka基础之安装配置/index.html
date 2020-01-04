@@ -75,7 +75,7 @@ centos7.3关闭防火墙以及selinux，不然启动kafka时候，会发现闪�
     </p>
   <p class="article-time">
     <time datetime="2020-01-04T11:23:36.000Z" itemprop="datePublished">2020-01-04</time>
-    Updated:<time datetime="2020-01-04T11:34:32.406Z" itemprop="dateModified">2020-01-04</time>
+    Updated:<time datetime="2020-01-04T11:41:07.882Z" itemprop="dateModified">2020-01-04</time>
     
   </p>
 </header>
@@ -146,6 +146,9 @@ centos7.3关闭防火墙以及selinux，不然启动kafka时候，会发现闪�
 
 <h4 id="5-gt-查看toic"><a href="#5-gt-查看toic" class="headerlink" title="5&gt; 查看toic"></a>5&gt; 查看toic</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kafka-topics.sh --list --zookeeper 192.168.23.128:2181</span><br></pre></td></tr></table></figure>
 <p>就会显示创建的所有topic</p>
+<p><strong>问题：</strong><br>启动kafka出现闪退<br>虚拟机资源是1g的内存，而kafka启动运行默认是1g。可以更改kafka的运行内存。<br>cat /opt/kafka/bin/kafka-server-start.sh </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export KAFKA_HEAP_OPTS=&quot;-Xmx256M -Xms128M&quot;</span><br></pre></td></tr></table></figure>
+
 <p><strong>参考网址：</strong><br><a href="https://www.orchome.com/kafka/index" target="_blank" rel="noopener">https://www.orchome.com/kafka/index</a><br><a href="https://www.maiyewang.com/archives/11183" target="_blank" rel="noopener">https://www.maiyewang.com/archives/11183</a><br><a href="https://www.cnblogs.com/luotianshuai/p/5206662.html" target="_blank" rel="noopener">https://www.cnblogs.com/luotianshuai/p/5206662.html</a><br><a href="https://kafka.apache.org/quickstart" target="_blank" rel="noopener">https://kafka.apache.org/quickstart</a><br><a href="https://cloud.tencent.com/developer/article/1151408" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1151408</a></p>
   
 	</div>
